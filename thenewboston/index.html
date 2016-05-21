@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>React First Step</title>
+    <meta name="description" content="React First Step">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
+    <link rel="stylesheet" href="../base.css">
+    <link rel="stylesheet" href="thenewboston.css">
+</head>
+
+<body>
+    <h1>Hello React</h1>
+    <p>
+        JSXTransformer.js lets us write html code in javascript, it is then compiled to javascript in the browser. It seems that
+        JSXTransformer is deprecated, the reason being that the process should rather be done before running the site, for
+        example with a gulp task.
+    </p>
+    <h2>React.createClass</h2>
+    <ul>
+        <li>It must have a render function</li>
+        <li>Multiple components must have a container element</li>
+        <li>Properties are ways to pass in information when rendering</li>
+        <li>React wants properties as camelCase in render method, not snake case like Angular</li>
+        <li>It is optional to pass them from the render method</li>
+        <li>Can have children inside rendered tag, there is a property name this.props.children to get to them</li>
+        <li>Can use evets</li>
+        <li>onClick and also className should not have quoutes if binding to property</li>
+    </ul>
+    <h2>Events</h2>
+
+    <div id="react-component-01"></div>
+    <div id="react-component-02"></div>
+    <div id="react-component-03"></div>
+    <div id="react-component-04"></div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+
+    <script type="text/jsx">
+
+
+        var MyComponent = React.createClass({ 
+            render: function(){
+                 return(
+                        <h2>My name is Henke</h2> 
+                    ); 
+                } 
+         }); 
+        
+        var MyComponentMultiple = React.createClass({ 
+            render: function(){ 
+                    return(
+                        <h2>My name is Henke too</h2> 
+                        ); 
+                } 
+            });
+            
+        var MyComponentWithProp = React.createClass({
+            render: function(){
+                return(
+                    <h2 className={this.props.colorClass}>My name is {this.props.name} {this.props.colorClass}</h2>
+                );
+            }
+        });
+        
+        var MyComponentWithChild = React.createClass({
+            doSomething: function(){
+                console.log("doSomething: " + this.props.game);
+            },
+            render: function(){
+                return(
+                    <div>
+                        <h3>{this.props.game}</h3>
+                        <p>{this.props.children}</p>
+                        <div>
+                            <span className="text-link" onClick={this.doSomething}>Do something</span>
+                        </div>
+                    </div>
+                );
+            }
+        });
+        
+        
+        
+        
+        React.render(
+            <MyComponent />, document.getElementById('react-component-01')
+        ); 
+        
+        React.render(
+            <div>
+                <MyComponentMultiple />
+                <MyComponentMultiple />
+                <MyComponentMultiple />
+            </div>, document.getElementById('react-component-02') 
+        );
+        
+        React.render(
+            <div>
+                <MyComponentWithProp name="Foo" colorClass="text-olive" />
+                <MyComponentWithProp name="Bar" />
+            </div>, document.getElementById('react-component-03')
+        );
+        
+        React.render(
+            <div>
+                <MyComponentWithChild game="Dragon Age 1">This game is great fantasy</MyComponentWithChild>
+                <MyComponentWithChild game="Mass Effect 1">This game is great SCI FI</MyComponentWithChild>
+            </div>, document.getElementById('react-component-04')
+        );
+
+
+    </script>
+</body>
+
+</html>
