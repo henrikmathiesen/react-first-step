@@ -1,0 +1,19 @@
+{
+  "name": "reactfirststep",
+  "version": "1.0.0",
+  "description": "My first ReactJS study. Learning from various sources",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/henrikmathiesen/reactFirstStep.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/henrikmathiesen/reactFirstStep/issues"
+  },
+  "homepage": "https://github.com/henrikmathiesen/reactFirstStep#readme"
+}
