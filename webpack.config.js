@@ -26,6 +26,7 @@ module.exports = {
                 include: [
                     path.resolve(__dirname, 'webpackworkflow/src')
                 ],
+                // exclude: /(node_modules|bower_components)/, include is preferred according to doc
                 query: {
                     presets: ['es2015', 'react']
                 }
