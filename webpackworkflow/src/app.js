@@ -9,7 +9,7 @@ var HelloWorld = React.createClass({
           Hello World! Iam {this.props.name}
         </p>
         <p>
-          The JSX compilation is done with the help of webpack
+          The JSX compilation is done with the help of webpack!
         </p>
       </div>
     );

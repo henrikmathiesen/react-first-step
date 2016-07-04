@@ -6,6 +6,7 @@ var webpack = require('webpack');
 module.exports = {
     entry: path.resolve(__dirname, 'webpackworkflow/src/app.js'),
     output: { path: path.resolve(__dirname, 'webpackworkflow/bld'), filename: 'bundle.js' },
+    watch: true,
 
     module: {
         loaders: [
