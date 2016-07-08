@@ -41,6 +41,44 @@
 
     <div id="react-example"></div>
 
+    <div>
+        <hr />
+        <h2>Reflections</h2>
+        <p>
+            Gulp with babel helps us compile ES6 to ES5, and also compiles JSX to JavaScript DOM creation.
+        </p>
+        <p>
+            What we have problems with however is the modular system.
+        </p>
+        <ul>
+            <li>ES6 language for import gets compiled to require syntax</li>
+            <li>We need to reference require</li>
+            <li>When we do that it complains that imported components have not been loaded</li>
+            <li>Require uses a callback syntax for require and act when loaded</li>
+        </ul>
+        <p>
+            We could use ES6 class system, which we labbed a little bit with, but it is not optimal because:
+        </p>
+        <ul>
+            <li>Since we can not use the modular system we have to be sure that files are references in the correct order, big hassle</li>
+            <li>By default every class is global</li>
+        </ul>
+        <h2>Conclusion</h2>
+        <p>
+            With Angular and Typescript we have a name spaces and a C# like type system. Also with Angular, 
+            order of references (except modules, which have to come first) does not matter. 
+        </p>
+        <p>
+            With Angular and ES6, we will still have the problem with globals.
+        </p>
+        <p>
+            With React, all roads point to Webpack. Webpack + Babel can do the same as Gulp + Babel.
+            Also, we get the module system at compile time (without RequireJS).
+        </p>
+        <hr />
+    </div>
+
+
 
     <!--<script src="../bower_components/requirejs/require.js"></script>-->
     <script src="bld/lib.js"></script>
