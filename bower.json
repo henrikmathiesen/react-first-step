@@ -1,12 +1,12 @@
 {
-  "name": "reactfirststep",
+  "name": "react-first-step",
   "description": "My first ReactJS study. Learning from various sources",
   "main": "index.js",
   "authors": [
     "Henrik <henrik_mathiesen@hotmail.com>"
   ],
   "license": "ISC",
-  "homepage": "https://github.com/henrikmathiesen/reactFirstStep",
+  "homepage": "https://github.com/henrikmathiesen/react-first-step",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -15,9 +15,9 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "^3.0.0",
-    "react": "^15.2.0",
-    "normalize-css": "^4.2.0",
-    "requirejs": "^2.2.0"
+    "jquery": "3.0.0",
+    "react": "15.2.0",
+    "normalize-css": "4.2.0",
+    "requirejs": "2.2.0"
   }
 }
