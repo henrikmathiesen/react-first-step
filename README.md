@@ -1,4 +1,4 @@
-# reactFirstStep
+# React First Step
 
 My first ReactJS study, mostly about setting up a development environment with Gulp and Webpack, and get a feel for things. Learning from various sources:
 
