@@ -1,5 +1,3 @@
-/// <reference path="../../typings/tsd.d.ts" />
-
 // ES6 syntax, compiled to ES5 require syntax by babel-preset-es2015, however we need requirejs to run it
 //import React from '../../bower_components/react/react';
 //import ReactDOM from '../../bower_components/react/react-dom';
